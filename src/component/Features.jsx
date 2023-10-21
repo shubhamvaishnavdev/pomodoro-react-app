@@ -29,7 +29,6 @@ const Features = ({
         setSelectedFeature('reset');
     };
 
-    console.log("at feature:   " + selectedMode);
 
 
     return (

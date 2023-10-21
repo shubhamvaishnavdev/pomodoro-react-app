@@ -24,7 +24,6 @@ const Pomodoro = () => {
         }
     }, [selectedMode])
 
-    console.log("at pomodoro:   " + selectedMode);
 
     return (
         <div className='h-[100vh] w-full flex justify-center items-center bg-gradient-to-r from-violet-600 to-indigo-600'>

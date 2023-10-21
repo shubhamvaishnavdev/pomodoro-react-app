@@ -13,10 +13,8 @@ const Timer = ({ setSelectedMode, time, setTime, isTimerRunning }) => {
                 setTime(time - 1);
             }, 1000);
         } 
-        console.log("time before auto change:  " + time)
         if (time < 1) {
             setSelectedMode((prev) => prev === 'focus' ? 'break' : 'focus') //automatic change mode after completion of one mode
-            console.log("time is 0 mode changed auto");
         }
 
         return () => clearInterval(timer);
