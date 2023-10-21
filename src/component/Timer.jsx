@@ -12,7 +12,9 @@ const Timer = ({ setSelectedMode, time, setTime, isTimerRunning }) => {
             timer = setInterval(() => {
                 setTime(time - 1);
             }, 1000);
-        } else if (time === 0) {
+        } 
+        
+        if (time === 0) {
             setSelectedMode(prev => prev === 'focus' ? 'break' : 'focus') //automatic change mode after completion of one mode
         }
 
