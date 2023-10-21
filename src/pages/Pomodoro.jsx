@@ -7,9 +7,9 @@ import Features from '../component/Features'
 const Pomodoro = () => {
 
     const [selectedMode, setSelectedMode] = useState('focus') //shows which mode is selcted
-    const [time, setTime] = useState(0) // used for setting time based on mode
+    const [time, setTime] = useState(1500) // used for setting time based on mode
     const [isTimerRunning, setIsTimerRunning] = useState(false); //check timer is running or not
-    const [selectedFeature, setSelectedFeature] = useState('reset'); //for knowing which feature is selcted like play, pause or reset
+    const [selectedFeature, setSelectedFeature] = useState(''); //for knowing which feature is selcted like play, pause or reset
 
     const FOCUS_MODE = 25 * 60; //focus mode timing 25 minutes
     const BREAK_MODE = 5 * 60; //break mode timing 5 minutes
@@ -23,6 +23,8 @@ const Pomodoro = () => {
             setTime(BREAK_MODE)
         }
     }, [selectedMode])
+
+    console.log("at pomodoro:   " + selectedMode);
 
     return (
         <div className='h-[100vh] w-full flex justify-center items-center bg-gradient-to-r from-violet-600 to-indigo-600'>

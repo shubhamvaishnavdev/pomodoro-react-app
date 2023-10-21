@@ -29,6 +29,9 @@ const Features = ({
         setSelectedFeature('reset');
     };
 
+    console.log("at feature:   " + selectedMode);
+
+
     return (
         <div className='h-auto w-full mt-4 flex justify-center items-center gap-2'>
 
